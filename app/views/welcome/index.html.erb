@@ -1,16 +1,16 @@
 <%= render(partial:'partials/navigation/navbar', locals: {
     activeLink: '1'
 }) %>
-<div class="container w-3/4 mx-auto mt-20">
+<div class="container mx-auto mt-20">
     <div class="flex flex-row">
 
-        <div class="flex flex-col justify-between w-8/12">
+        <div class="flex flex-col">
             <div>
                 <h1 class="text-6xl font-bold">Logiciel de gestion pour <span class="text-red-600">association suisses</span></h1>
                 <h3 class="text-l text-gray-400 mt-2">AssociaPlus est une solution en ligne pour gérer la comptabilité, les membres et les activités de votre association.</h3>
             </div>
-            <div class="">
-                <button class="py-2 px-4 font-semibold rounded-lg shadow-md bg-green-500 hover:bg-green-700">Créez votre compte gratuitement</button>
+            <div class="mt-20">
+                <button class=" text-xl p-4 font-semibold rounded-lg shadow-md bg-green-500 hover:bg-green-700 w-3/4">Créez votre compte gratuitement !</button>
             </div>
         </div>
 
@@ -19,4 +19,27 @@
         </div>
 
     </div>
+
+    <div class="py-12 mt-20 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+        <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">Fonctionnalités</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
+            Une façon plus simple de gérer votre association.
+        </p>
+        <p class="mt-4 w-3/4 text-l text-gray-400 lg:mx-auto">
+            AssociaPlus vous aide au quotidien dans la maitrise de votre association en vous fournissant des outils de contrôles des membres ou gestion de comptabilité.
+        </p>
+        </div>
+
+        <div class="mt-10">
+        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+            <%= render 'welcome/partials/feature_card'%>
+            <%= render 'welcome/partials/feature_card' %>
+            <%= render 'welcome/partials/feature_card' %>
+        </dl>
+        </div>
+    </div>
+    </div>
+    
 </div>
