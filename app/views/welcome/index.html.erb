@@ -1,2 +1,22 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%= render(partial:'partials/navigation/navbar', locals: {
+    activeLink: '1'
+}) %>
+<div class="container w-3/4 mx-auto mt-20">
+    <div class="flex flex-row">
+
+        <div class="flex flex-col justify-between w-8/12">
+            <div>
+                <h1 class="text-6xl font-bold">Logiciel de gestion pour <span class="text-red-600">association suisses</span></h1>
+                <h3 class="text-l text-gray-400 mt-2">AssociaPlus est une solution en ligne pour gérer la comptabilité, les membres et les activités de votre association.</h3>
+            </div>
+            <div class="">
+                <button class="py-2 px-4 font-semibold rounded-lg shadow-md bg-green-500 hover:bg-green-700">Créez votre compte gratuitement</button>
+            </div>
+        </div>
+
+        <div>
+            <%= render 'partials/icon/main_image' %>
+        </div>
+
+    </div>
+</div>

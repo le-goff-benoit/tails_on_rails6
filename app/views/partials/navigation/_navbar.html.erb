@@ -1,17 +1,34 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
+<% if activeLink == '1' %>
 <nav class="bg-gray-800">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto px-2">
     <div class="relative flex items-center justify-between h-16">
-      <h1 class="text-xl text-yellow-500">AssociaPlus</h1>
+      <h1 class="text-gray-300 text-2xl">Associa<span class="text-red-600">Plus</span></h1>
+      <%= render(partial:'partials/icon/main_logo')%>
       <div class="flex-1 flex items-center justify-end">
-        <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-4">
-            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-            <a href="#" class="text-red-500 hover:bg-gray-700 hover:text-red:600 px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
-          </div>
+        <div class="flex space-x-4">
+          <%= link_to "Accueil", welcome_index_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" %>
+          <%= link_to "Contact", welcome_contact_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
+          <%= link_to "Connexion", welcome_index_path, class: "text-red-500 hover:bg-gray-700 hover:text-red:600 px-3 py-2 rounded-md text-sm font-medium" %>
         </div>
       </div>
     </div>
   </div>
 </nav>
+<% else activeLink == '2' %>
+<nav class="bg-gray-800">
+  <div class="max-w-7xl mx-auto px-2">
+    <div class="relative flex items-center justify-between h-16">
+      <h1 class="text-gray-300 text-2xl">Associa<span class="text-red-600">Plus</span></h1>
+      <%= render(partial:'partials/icon/main_logo')%>
+      <div class="flex-1 flex items-center justify-end">
+        <div class="flex space-x-4">
+            <%= link_to "Accueil", welcome_index_path, class: "text-white px-3 py-2 rounded-md text-sm font-medium" %>
+            <%= link_to "Contact", welcome_contact_path, class: "bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
+            <%= link_to "Connexion", welcome_index_path, class: "text-red-500 hover:bg-gray-700 hover:text-red:600 px-3 py-2 rounded-md text-sm font-medium" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<% end %>
